@@ -1,0 +1,28 @@
+aid: bureau-of-justice-statistics
+name: Bureau of Justice Statistics
+description: >-
+  The Bureau of Justice Statistics (BJS) publishes information on crime,
+  criminal offenders, victims of crime, and the operation of justice systems.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - API
+created: '2024-11-30'
+modified: '2024-11-30'
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/bureau-of-justice-statistics/refs/heads/main/apis.yml
+specificationVersion: '0.19'
+apis:
+  - aid: bureau-of-justice-statistics:bureau-of-justice-statistics
+    name: Bureau of Justice Statistics
+    description: >-
+      The Bureau of Justice Statistics (BJS) publishes information on crime,
+      criminal offenders, victims of crime, and the operation of justice
+      systems.
+    tags:
+      - API
+    properties:
+      - type: Documentation
+maintainers:
+  - FN: Kin Lane
+    email: info@apievangelist.com
