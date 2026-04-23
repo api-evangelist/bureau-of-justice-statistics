@@ -6,6 +6,7 @@ The Bureau of Justice Statistics (BJS) publishes information on crime, criminal 
 ## Scope
 
 - **Type:** Index
+- **x-type:** government
 - **Position:** Consumer
 - **Access:** 3rd-Party
 
@@ -21,7 +22,7 @@ The Bureau of Justice Statistics (BJS) publishes information on crime, criminal 
 ## Timestamps
 
 - **Created:** 2024-11-30
-- **Modified:** 2026-04-21
+- **Modified:** 2026-04-23
 
 ## APIs
 
@@ -104,6 +105,7 @@ A suite of interactive web-based data tools providing access to BJS statistical 
 - [Portal](https://bjs.ojp.gov/data)
 - [Privacy Policy](https://bjs.ojp.gov/legal/privacy-policy)
 - [Data Collections](https://bjs.ojp.gov/data-collections/search)
+- [Data Portal](https://catalog.data.gov/dataset?organization=ojp-gov)
 
 ## Maintainers
 

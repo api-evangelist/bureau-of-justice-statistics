@@ -10,10 +10,11 @@ tags:
   - Victimization
   - Recidivism
 type: Index
+x-type: government
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
 created: '2024-11-30'
-modified: '2026-04-21'
+modified: '2026-04-23'
 position: Consumer
 description: >-
   The Bureau of Justice Statistics (BJS) publishes information on crime,
@@ -31,6 +32,8 @@ apis:
     properties:
       - url: https://bjs.ojp.gov/national-incident-based-reporting-system-nibrs-national-estimates-api
         type: Documentation
+      - url: https://catalog.data.gov/dataset?organization=ojp-gov
+        type: DataAPI
     description: >-
       Provides access to national estimates derived from the FBI's National
       Incident-Based Reporting System (NIBRS). Includes violent and property
@@ -124,6 +127,8 @@ common:
     url: https://bjs.ojp.gov/legal/privacy-policy
   - type: Data Collections
     url: https://bjs.ojp.gov/data-collections/search
+  - type: Data Portal
+    url: https://catalog.data.gov/dataset?organization=ojp-gov
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
