@@ -34,6 +34,8 @@ apis:
         type: Documentation
       - url: https://catalog.data.gov/dataset?organization=ojp-gov
         type: DataAPI
+      - url: openapi/bureau-of-justice-statistics-openapi.yml
+        type: OpenAPI
     description: >-
       Provides access to national estimates derived from the FBI's National
       Incident-Based Reporting System (NIBRS). Includes violent and property
