@@ -1,0 +1,99 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: BJS NIBRS National Estimates API — Violent Crime
+  description: 'BJS NIBRS National Estimates API — Violent Crime. 2 operations. Lead operation: Violent crime incidents (counts,
+    percentages, rates). Self-contained Naftiko capability covering one Bureau Of Justice Statistics business surface.'
+  tags:
+  - Bureau Of Justice Statistics
+  - Violent Crime
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    BUREAU_OF_JUSTICE_STATISTICS_API_KEY: BUREAU_OF_JUSTICE_STATISTICS_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: bureau-of-justice-statistics-violent-crime
+    baseUri: https://api.ojp.gov/bjsdataset/v1
+    description: BJS NIBRS National Estimates API — Violent Crime business capability. Self-contained, no shared references.
+    resources:
+    - name: resource-r32q-bdaw.json
+      path: /resource/r32q-bdaw.json
+      operations:
+      - name: getviolentincidents
+        method: GET
+        description: Violent crime incidents (counts, percentages, rates)
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: resource-x3sz-eb6y.json
+      path: /resource/x3sz-eb6y.json
+      operations:
+      - name: getviolentoffenses
+        method: GET
+        description: Violent crime offenses (counts, percentages, rates)
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    namespace: bureau-of-justice-statistics-violent-crime-rest
+    port: 8080
+    description: REST adapter for BJS NIBRS National Estimates API — Violent Crime. One Spectral-compliant resource per consumed
+      operation, prefixed with /v1.
+    resources:
+    - path: /v1/resource/r32q-bdaw-json
+      name: resource-r32q-bdaw-json
+      description: REST surface for resource-r32q-bdaw.json.
+      operations:
+      - method: GET
+        name: getviolentincidents
+        description: Violent crime incidents (counts, percentages, rates)
+        call: bureau-of-justice-statistics-violent-crime.getviolentincidents
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/resource/x3sz-eb6y-json
+      name: resource-x3sz-eb6y-json
+      description: REST surface for resource-x3sz-eb6y.json.
+      operations:
+      - method: GET
+        name: getviolentoffenses
+        description: Violent crime offenses (counts, percentages, rates)
+        call: bureau-of-justice-statistics-violent-crime.getviolentoffenses
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: bureau-of-justice-statistics-violent-crime-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for BJS NIBRS National Estimates API — Violent Crime. One tool per consumed operation, routed
+      inline through this capability's consumes block.
+    tools:
+    - name: violent-crime-incidents-counts-percentages
+      description: Violent crime incidents (counts, percentages, rates)
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: bureau-of-justice-statistics-violent-crime.getviolentincidents
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: violent-crime-offenses-counts-percentages
+      description: Violent crime offenses (counts, percentages, rates)
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: bureau-of-justice-statistics-violent-crime.getviolentoffenses
+      outputParameters:
+      - type: object
+        mapping: $.

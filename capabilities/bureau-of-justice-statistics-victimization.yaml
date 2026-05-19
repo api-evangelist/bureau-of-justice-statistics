@@ -1,0 +1,99 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: BJS NIBRS National Estimates API — Victimization
+  description: 'BJS NIBRS National Estimates API — Victimization. 2 operations. Lead operation: Victimization counts and percentages
+    across demographics. Self-contained Naftiko capability covering one Bureau Of Justice Statistics business surface.'
+  tags:
+  - Bureau Of Justice Statistics
+  - Victimization
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    BUREAU_OF_JUSTICE_STATISTICS_API_KEY: BUREAU_OF_JUSTICE_STATISTICS_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: bureau-of-justice-statistics-victimization
+    baseUri: https://api.ojp.gov/bjsdataset/v1
+    description: BJS NIBRS National Estimates API — Victimization business capability. Self-contained, no shared references.
+    resources:
+    - name: resource-ms42-n765.json
+      path: /resource/ms42-n765.json
+      operations:
+      - name: getvictimizationcounts
+        method: GET
+        description: Victimization counts and percentages across demographics
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: resource-uy37-xgmh.json
+      path: /resource/uy37-xgmh.json
+      operations:
+      - name: getvictimizationrates
+        method: GET
+        description: Victimization rates by demographic characteristics
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    namespace: bureau-of-justice-statistics-victimization-rest
+    port: 8080
+    description: REST adapter for BJS NIBRS National Estimates API — Victimization. One Spectral-compliant resource per consumed
+      operation, prefixed with /v1.
+    resources:
+    - path: /v1/resource/ms42-n765-json
+      name: resource-ms42-n765-json
+      description: REST surface for resource-ms42-n765.json.
+      operations:
+      - method: GET
+        name: getvictimizationcounts
+        description: Victimization counts and percentages across demographics
+        call: bureau-of-justice-statistics-victimization.getvictimizationcounts
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/resource/uy37-xgmh-json
+      name: resource-uy37-xgmh-json
+      description: REST surface for resource-uy37-xgmh.json.
+      operations:
+      - method: GET
+        name: getvictimizationrates
+        description: Victimization rates by demographic characteristics
+        call: bureau-of-justice-statistics-victimization.getvictimizationrates
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: bureau-of-justice-statistics-victimization-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for BJS NIBRS National Estimates API — Victimization. One tool per consumed operation, routed
+      inline through this capability's consumes block.
+    tools:
+    - name: victimization-counts-and-percentages-across
+      description: Victimization counts and percentages across demographics
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: bureau-of-justice-statistics-victimization.getvictimizationcounts
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: victimization-rates-demographic-characteristics
+      description: Victimization rates by demographic characteristics
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: bureau-of-justice-statistics-victimization.getvictimizationrates
+      outputParameters:
+      - type: object
+        mapping: $.

@@ -1,0 +1,99 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: BJS NIBRS National Estimates API — Property Crime
+  description: 'BJS NIBRS National Estimates API — Property Crime. 2 operations. Lead operation: Property crime incidents
+    (counts, percentages, rates). Self-contained Naftiko capability covering one Bureau Of Justice Statistics business surface.'
+  tags:
+  - Bureau Of Justice Statistics
+  - Property Crime
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    BUREAU_OF_JUSTICE_STATISTICS_API_KEY: BUREAU_OF_JUSTICE_STATISTICS_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: bureau-of-justice-statistics-property-crime
+    baseUri: https://api.ojp.gov/bjsdataset/v1
+    description: BJS NIBRS National Estimates API — Property Crime business capability. Self-contained, no shared references.
+    resources:
+    - name: resource-iv7i-eah6.json
+      path: /resource/iv7i-eah6.json
+      operations:
+      - name: getpropertyincidents
+        method: GET
+        description: Property crime incidents (counts, percentages, rates)
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: resource-kj7p-vx4s.json
+      path: /resource/kj7p-vx4s.json
+      operations:
+      - name: getpropertyoffenses
+        method: GET
+        description: Property crime offenses (counts, percentages, rates)
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    namespace: bureau-of-justice-statistics-property-crime-rest
+    port: 8080
+    description: REST adapter for BJS NIBRS National Estimates API — Property Crime. One Spectral-compliant resource per consumed
+      operation, prefixed with /v1.
+    resources:
+    - path: /v1/resource/iv7i-eah6-json
+      name: resource-iv7i-eah6-json
+      description: REST surface for resource-iv7i-eah6.json.
+      operations:
+      - method: GET
+        name: getpropertyincidents
+        description: Property crime incidents (counts, percentages, rates)
+        call: bureau-of-justice-statistics-property-crime.getpropertyincidents
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/resource/kj7p-vx4s-json
+      name: resource-kj7p-vx4s-json
+      description: REST surface for resource-kj7p-vx4s.json.
+      operations:
+      - method: GET
+        name: getpropertyoffenses
+        description: Property crime offenses (counts, percentages, rates)
+        call: bureau-of-justice-statistics-property-crime.getpropertyoffenses
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: bureau-of-justice-statistics-property-crime-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for BJS NIBRS National Estimates API — Property Crime. One tool per consumed operation, routed
+      inline through this capability's consumes block.
+    tools:
+    - name: property-crime-incidents-counts-percentages
+      description: Property crime incidents (counts, percentages, rates)
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: bureau-of-justice-statistics-property-crime.getpropertyincidents
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: property-crime-offenses-counts-percentages
+      description: Property crime offenses (counts, percentages, rates)
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: bureau-of-justice-statistics-property-crime.getpropertyoffenses
+      outputParameters:
+      - type: object
+        mapping: $.
