@@ -1,0 +1,184 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "BJS NIBRS National Estimates API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Violent Crime",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Violent crime incidents (counts, percentages, rates)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.ojp.gov/bjsdataset/v1/resource/r32q-bdaw.json",
+            "params": [
+              {
+                "name": "$limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of records to return (default 1000)."
+              },
+              {
+                "name": "$offset",
+                "value": "",
+                "type": "query",
+                "description": "Pagination offset."
+              }
+            ]
+          },
+          "docs": "Violent crime incidents (counts, percentages, rates)"
+        },
+        {
+          "info": {
+            "name": "Violent crime offenses (counts, percentages, rates)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.ojp.gov/bjsdataset/v1/resource/x3sz-eb6y.json",
+            "params": [
+              {
+                "name": "$limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of records to return (default 1000)."
+              },
+              {
+                "name": "$offset",
+                "value": "",
+                "type": "query",
+                "description": "Pagination offset."
+              }
+            ]
+          },
+          "docs": "Violent crime offenses (counts, percentages, rates)"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Property Crime",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Property crime incidents (counts, percentages, rates)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.ojp.gov/bjsdataset/v1/resource/iv7i-eah6.json",
+            "params": [
+              {
+                "name": "$limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of records to return (default 1000)."
+              },
+              {
+                "name": "$offset",
+                "value": "",
+                "type": "query",
+                "description": "Pagination offset."
+              }
+            ]
+          },
+          "docs": "Property crime incidents (counts, percentages, rates)"
+        },
+        {
+          "info": {
+            "name": "Property crime offenses (counts, percentages, rates)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.ojp.gov/bjsdataset/v1/resource/kj7p-vx4s.json",
+            "params": [
+              {
+                "name": "$limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of records to return (default 1000)."
+              },
+              {
+                "name": "$offset",
+                "value": "",
+                "type": "query",
+                "description": "Pagination offset."
+              }
+            ]
+          },
+          "docs": "Property crime offenses (counts, percentages, rates)"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Victimization",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Victimization counts and percentages across demographics",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.ojp.gov/bjsdataset/v1/resource/ms42-n765.json",
+            "params": [
+              {
+                "name": "$limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of records to return (default 1000)."
+              },
+              {
+                "name": "$offset",
+                "value": "",
+                "type": "query",
+                "description": "Pagination offset."
+              }
+            ]
+          },
+          "docs": "Victimization counts and percentages across demographics"
+        },
+        {
+          "info": {
+            "name": "Victimization rates by demographic characteristics",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.ojp.gov/bjsdataset/v1/resource/uy37-xgmh.json",
+            "params": [
+              {
+                "name": "$limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of records to return (default 1000)."
+              },
+              {
+                "name": "$offset",
+                "value": "",
+                "type": "query",
+                "description": "Pagination offset."
+              }
+            ]
+          },
+          "docs": "Victimization rates by demographic characteristics"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
