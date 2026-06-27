@@ -88,17 +88,17 @@ apis:
       - url: https://bjs.ojp.gov/data/data-analysis-tools
         type: Documentation
       - url: https://learcat.bjs.ojp.gov/
-        type: Tool
+        type: Tools
       - url: https://bjs.ojp.gov/recidivism-patterns-explorer
-        type: Tool
+        type: Tools
       - url: https://fccps.bjs.ojp.gov/
-        type: Tool
+        type: Tools
       - url: https://csat.bjs.ojp.gov/
-        type: Tool
+        type: Tools
       - url: https://bjs.ojp.gov/jeet
-        type: Tool
+        type: Tools
       - url: https://ncvs.bjs.ojp.gov/Home
-        type: Tool
+        type: Tools
     description: >-
       A suite of interactive web-based data tools providing access to BJS statistical data on crime, corrections,
       courts, law enforcement, and victimization. Tools include LEARCAT (law enforcement agency crime data), Recidivism
