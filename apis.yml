@@ -116,6 +116,8 @@ apis:
       - Justice system spending analysis
       - Interactive data exploration
 common:
+  - type: DomainSecurity
+    url: security/bureau-of-justice-statistics-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/bureau-of-justice-statistics
   - type: Website
