@@ -1,0 +1,69 @@
+openapi: 3.1.0
+info:
+  title: BJS NIBRS National Estimates Property Crime Violent Crime API
+  version: '1.0'
+  description: Minimal OpenAPI 3.1 description of the Bureau of Justice Statistics' NIBRS National Estimates API. Datasets are served as Socrata-style resources with JSON or CSV representations selected by file extension.
+  x-generated-from: https://bjs.ojp.gov/national-incident-based-reporting-system-nibrs-national-estimates-api
+  x-generated-by: claude-crawl-2026-05-08
+servers:
+- url: https://api.ojp.gov/bjsdataset/v1
+  description: Production
+tags:
+- name: Violent Crime
+paths:
+  /resource/r32q-bdaw.json:
+    get:
+      tags:
+      - Violent Crime
+      summary: Violent crime incidents (counts, percentages, rates)
+      operationId: getViolentIncidents
+      parameters:
+      - $ref: '#/components/parameters/LimitParam'
+      - $ref: '#/components/parameters/OffsetParam'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RowList'
+  /resource/x3sz-eb6y.json:
+    get:
+      tags:
+      - Violent Crime
+      summary: Violent crime offenses (counts, percentages, rates)
+      operationId: getViolentOffenses
+      parameters:
+      - $ref: '#/components/parameters/LimitParam'
+      - $ref: '#/components/parameters/OffsetParam'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RowList'
+components:
+  schemas:
+    Row:
+      type: object
+      additionalProperties: true
+    RowList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Row'
+  parameters:
+    LimitParam:
+      name: $limit
+      in: query
+      description: Maximum number of records to return (default 1000).
+      schema:
+        type: integer
+        minimum: 1
+    OffsetParam:
+      name: $offset
+      in: query
+      description: Pagination offset.
+      schema:
+        type: integer
+        minimum: 0
