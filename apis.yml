@@ -10,7 +10,19 @@ tags:
   - Recidivism
 type: Index
 kind: government
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/bureau-of-justice-statistics.png
 access: 3rd-Party
 created: '2024-11-30'
 modified: '2026-05-19'
@@ -19,102 +31,120 @@ description: >-
   The Bureau of Justice Statistics (BJS) publishes information on crime, criminal offenders, victims of crime, and the
   operation of justice systems.
 apis:
-  - aid: bureau-of-justice-statistics:nibrs-national-estimates-api
-    name: NIBRS National Estimates API
-    tags:
-      - Federal Government
-      - Crime
-      - Statistics
-      - NIBRS
-    humanURL: https://bjs.ojp.gov/national-incident-based-reporting-system-nibrs-national-estimates-api
-    baseURL: https://api.ojp.gov/bjsdataset/v1/
-    properties:
-      - url: https://bjs.ojp.gov/national-incident-based-reporting-system-nibrs-national-estimates-api
-        type: Documentation
-      - url: https://catalog.data.gov/dataset?organization=ojp-gov
-        type: DataAPI
-      - url: openapi/bureau-of-justice-statistics-openapi.yml
-        type: OpenAPI
-    description: >-
-      Provides access to national estimates derived from the FBI's National Incident-Based Reporting System (NIBRS).
-      Includes violent and property incidents, offenses, victimization counts, percentages, and rates. No authentication
-      required.
-    features:
-      - Violent Incident Data
-      - Property Incident Data
-      - Offense Data
-      - Victimization Rates
-      - Filterable by Demographics
-      - JSON and CSV Formats
-      - Pagination Support
-    useCases:
-      - Criminal justice policy research
-      - Crime trend analysis
-      - Academic study of offense patterns
-      - Public safety planning
-  - aid: bureau-of-justice-statistics:ncvs-api
-    name: National Crime Victimization Survey (NCVS) API
-    tags:
-      - Federal Government
-      - Victimization
-      - Statistics
-    humanURL: https://bjs.ojp.gov/national-crime-victimization-survey-ncvs-api
-    baseURL: https://api.ojp.gov/bjsdataset/v1/
-    properties:
-      - url: https://bjs.ojp.gov/national-crime-victimization-survey-ncvs-api
-        type: Documentation
-    description: >-
-      Provides access to victimization data from the National Crime Victimization Survey (NCVS), covering personal and
-      household victimization data along with population estimates. No authentication required.
-    features:
-      - Personal Victimization Data
-      - Household Victimization Data
-      - Population Estimates
-      - JSON and CSV Formats
-      - Filterable by Year
-    useCases:
-      - Victimization research
-      - Policy development
-      - Trend analysis over time
-      - Comparative household and personal crime studies
-  - aid: bureau-of-justice-statistics:bjs-data-analysis-tools
-    name: BJS Data Analysis Tools
-    tags:
-      - Federal Government
-      - Statistics
-      - Dashboards
-    humanURL: https://bjs.ojp.gov/data/data-analysis-tools
-    properties:
-      - url: https://bjs.ojp.gov/data/data-analysis-tools
-        type: Documentation
-      - url: https://learcat.bjs.ojp.gov/
-        type: Tools
-      - url: https://bjs.ojp.gov/recidivism-patterns-explorer
-        type: Tools
-      - url: https://fccps.bjs.ojp.gov/
-        type: Tools
-      - url: https://csat.bjs.ojp.gov/
-        type: Tools
-      - url: https://bjs.ojp.gov/jeet
-        type: Tools
-      - url: https://ncvs.bjs.ojp.gov/Home
-        type: Tools
-    description: >-
-      A suite of interactive web-based data tools providing access to BJS statistical data on crime, corrections,
-      courts, law enforcement, and victimization. Tools include LEARCAT (law enforcement agency crime data), Recidivism
-      Patterns Explorer, Federal Criminal Case Processing Statistics, and NCVS Dashboard.
-    features:
-      - Law Enforcement Crime Data (LEARCAT)
-      - Recidivism Analysis
-      - Federal Criminal Case Processing
-      - Corrections Statistical Analysis
-      - Justice Expenditure Data
-      - Parole and Probation Dashboards
-    useCases:
-      - Criminal justice research
-      - Recidivism policy analysis
-      - Justice system spending analysis
-      - Interactive data exploration
+- aid: bureau-of-justice-statistics:ncvs-api
+  name: National Crime Victimization Survey (NCVS) API
+  tags:
+  - Federal Government
+  - Victimization
+  - Statistics
+  humanURL: https://bjs.ojp.gov/national-crime-victimization-survey-ncvs-api
+  baseURL: https://api.ojp.gov/bjsdataset/v1/
+  properties:
+  - url: https://bjs.ojp.gov/national-crime-victimization-survey-ncvs-api
+    type: Documentation
+  description: >-
+    Provides access to victimization data from the National Crime Victimization Survey (NCVS), covering
+    personal and household victimization data along with population estimates. No authentication required.
+  features:
+  - Personal Victimization Data
+  - Household Victimization Data
+  - Population Estimates
+  - JSON and CSV Formats
+  - Filterable by Year
+  useCases:
+  - Victimization research
+  - Policy development
+  - Trend analysis over time
+  - Comparative household and personal crime studies
+- aid: bureau-of-justice-statistics:bjs-data-analysis-tools
+  name: BJS Data Analysis Tools
+  tags:
+  - Federal Government
+  - Statistics
+  - Dashboards
+  humanURL: https://bjs.ojp.gov/data/data-analysis-tools
+  properties:
+  - url: https://bjs.ojp.gov/data/data-analysis-tools
+    type: Documentation
+  - url: https://learcat.bjs.ojp.gov/
+    type: Tools
+  - url: https://bjs.ojp.gov/recidivism-patterns-explorer
+    type: Tools
+  - url: https://fccps.bjs.ojp.gov/
+    type: Tools
+  - url: https://csat.bjs.ojp.gov/
+    type: Tools
+  - url: https://bjs.ojp.gov/jeet
+    type: Tools
+  - url: https://ncvs.bjs.ojp.gov/Home
+    type: Tools
+  description: >-
+    A suite of interactive web-based data tools providing access to BJS statistical data on crime, corrections,
+    courts, law enforcement, and victimization. Tools include LEARCAT (law enforcement agency crime data),
+    Recidivism Patterns Explorer, Federal Criminal Case Processing Statistics, and NCVS Dashboard.
+  features:
+  - Law Enforcement Crime Data (LEARCAT)
+  - Recidivism Analysis
+  - Federal Criminal Case Processing
+  - Corrections Statistical Analysis
+  - Justice Expenditure Data
+  - Parole and Probation Dashboards
+  useCases:
+  - Criminal justice research
+  - Recidivism policy analysis
+  - Justice system spending analysis
+  - Interactive data exploration
+- aid: bureau-of-justice-statistics:bureau-of-justice-statistics-property-crime-api
+  name: Bureau of Justice Statistics Property Crime API
+  description: >-
+    The Property Crime API from Bureau of Justice Statistics — 2 operation(s) for property crime.
+  humanURL: >-
+    https://bjs.ojp.gov/national-incident-based-reporting-system-nibrs-national-estimates-api
+  baseURL: https://api.ojp.gov/bjsdataset/v1/
+  tags:
+  - Property Crime
+  properties:
+  - type: OpenAPI
+    url: openapi/bureau-of-justice-statistics-property-crime-api-openapi.yml
+  - type: Documentation
+    url: >-
+      https://bjs.ojp.gov/national-incident-based-reporting-system-nibrs-national-estimates-api
+  - type: DataAPI
+    url: https://catalog.data.gov/dataset?organization=ojp-gov
+- aid: bureau-of-justice-statistics:bureau-of-justice-statistics-victimization-api
+  name: Bureau of Justice Statistics Victimization API
+  description: >-
+    The Victimization API from Bureau of Justice Statistics — 2 operation(s) for victimization.
+  humanURL: >-
+    https://bjs.ojp.gov/national-incident-based-reporting-system-nibrs-national-estimates-api
+  baseURL: https://api.ojp.gov/bjsdataset/v1/
+  tags:
+  - Victimization
+  properties:
+  - type: OpenAPI
+    url: openapi/bureau-of-justice-statistics-victimization-api-openapi.yml
+  - type: Documentation
+    url: >-
+      https://bjs.ojp.gov/national-incident-based-reporting-system-nibrs-national-estimates-api
+  - type: DataAPI
+    url: https://catalog.data.gov/dataset?organization=ojp-gov
+- aid: bureau-of-justice-statistics:bureau-of-justice-statistics-violent-crime-api
+  name: Bureau of Justice Statistics Violent Crime API
+  description: >-
+    The Violent Crime API from Bureau of Justice Statistics — 2 operation(s) for violent crime.
+  humanURL: >-
+    https://bjs.ojp.gov/national-incident-based-reporting-system-nibrs-national-estimates-api
+  baseURL: https://api.ojp.gov/bjsdataset/v1/
+  tags:
+  - Violent Crime
+  properties:
+  - type: OpenAPI
+    url: openapi/bureau-of-justice-statistics-violent-crime-api-openapi.yml
+  - type: Documentation
+    url: >-
+      https://bjs.ojp.gov/national-incident-based-reporting-system-nibrs-national-estimates-api
+  - type: DataAPI
+    url: https://catalog.data.gov/dataset?organization=ojp-gov
 common:
   - type: AgenticAccess
     url: agentic-access/bureau-of-justice-statistics-agentic-access.yml
