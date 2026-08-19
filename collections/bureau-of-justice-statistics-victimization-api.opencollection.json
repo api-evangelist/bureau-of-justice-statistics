@@ -1,0 +1,68 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "BJS NIBRS National Estimates Property Crime Victimization API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Victimization",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Victimization counts and percentages across demographics",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.ojp.gov/bjsdataset/v1/resource/ms42-n765.json",
+            "params": [
+              {
+                "name": "$limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of records to return (default 1000)."
+              },
+              {
+                "name": "$offset",
+                "value": "",
+                "type": "query",
+                "description": "Pagination offset."
+              }
+            ]
+          },
+          "docs": "Victimization counts and percentages across demographics"
+        },
+        {
+          "info": {
+            "name": "Victimization rates by demographic characteristics",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.ojp.gov/bjsdataset/v1/resource/uy37-xgmh.json",
+            "params": [
+              {
+                "name": "$limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of records to return (default 1000)."
+              },
+              {
+                "name": "$offset",
+                "value": "",
+                "type": "query",
+                "description": "Pagination offset."
+              }
+            ]
+          },
+          "docs": "Victimization rates by demographic characteristics"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

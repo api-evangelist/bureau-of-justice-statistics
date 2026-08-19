@@ -1,0 +1,214 @@
+{
+  "item": [
+    {
+      "id": "4ec54431-f7d6-46cc-ab45-5c84fb682847",
+      "name": "Violent Crime",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "511ed4e2-0023-41bb-b3af-a5780f80e7bb",
+          "name": "Violent crime incidents (counts, percentages, rates)",
+          "request": {
+            "name": "Violent crime incidents (counts, percentages, rates)",
+            "description": {},
+            "url": {
+              "path": [
+                "resource",
+                "r32q-bdaw.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "$limit",
+                  "value": "<integer>",
+                  "description": "Maximum number of records to return (default 1000)."
+                },
+                {
+                  "disabled": false,
+                  "key": "$offset",
+                  "value": "<integer>",
+                  "description": "Pagination offset."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "08ae9a91-356f-4c94-a9c9-4f96df17d23a",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "resource",
+                    "r32q-bdaw.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "$limit",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "$offset",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"key_0\": 3934.279070662089,\n    \"key_1\": 3969.3121415150613,\n    \"key_2\": 7085,\n    \"key_3\": \"string\"\n  },\n  {\n    \"key_0\": 5181,\n    \"key_1\": 4295.068924463309,\n    \"key_2\": 7209\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "45ee7762-54b2-46fb-a82a-5dc4a7e15873",
+          "name": "Violent crime offenses (counts, percentages, rates)",
+          "request": {
+            "name": "Violent crime offenses (counts, percentages, rates)",
+            "description": {},
+            "url": {
+              "path": [
+                "resource",
+                "x3sz-eb6y.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "$limit",
+                  "value": "<integer>",
+                  "description": "Maximum number of records to return (default 1000)."
+                },
+                {
+                  "disabled": false,
+                  "key": "$offset",
+                  "value": "<integer>",
+                  "description": "Pagination offset."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9dcc7375-aa87-4959-bf4d-33729b59c5fd",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "resource",
+                    "x3sz-eb6y.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "$limit",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "$offset",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"key_0\": 3934.279070662089,\n    \"key_1\": 3969.3121415150613,\n    \"key_2\": 7085,\n    \"key_3\": \"string\"\n  },\n  {\n    \"key_0\": 5181,\n    \"key_1\": 4295.068924463309,\n    \"key_2\": 7209\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.ojp.gov/bjsdataset/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "a7571d2d-72d8-4915-8593-a61aca962efe",
+    "name": "BJS NIBRS National Estimates Property Crime Violent Crime API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Minimal OpenAPI 3.1 description of the Bureau of Justice Statistics' NIBRS National Estimates API. Datasets are served as Socrata-style resources with JSON or CSV representations selected by file extension.",
+      "type": "text/plain"
+    }
+  }
+}

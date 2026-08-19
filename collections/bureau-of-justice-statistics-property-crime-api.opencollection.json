@@ -1,0 +1,68 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "BJS NIBRS National Estimates Property Crime API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Property Crime",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Property crime incidents (counts, percentages, rates)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.ojp.gov/bjsdataset/v1/resource/iv7i-eah6.json",
+            "params": [
+              {
+                "name": "$limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of records to return (default 1000)."
+              },
+              {
+                "name": "$offset",
+                "value": "",
+                "type": "query",
+                "description": "Pagination offset."
+              }
+            ]
+          },
+          "docs": "Property crime incidents (counts, percentages, rates)"
+        },
+        {
+          "info": {
+            "name": "Property crime offenses (counts, percentages, rates)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.ojp.gov/bjsdataset/v1/resource/kj7p-vx4s.json",
+            "params": [
+              {
+                "name": "$limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of records to return (default 1000)."
+              },
+              {
+                "name": "$offset",
+                "value": "",
+                "type": "query",
+                "description": "Pagination offset."
+              }
+            ]
+          },
+          "docs": "Property crime offenses (counts, percentages, rates)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

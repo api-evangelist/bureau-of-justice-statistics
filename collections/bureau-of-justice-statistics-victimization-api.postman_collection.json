@@ -1,0 +1,214 @@
+{
+  "item": [
+    {
+      "id": "1b1f1da3-7deb-4daf-a363-9b31943c0111",
+      "name": "Victimization",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "60eb7ba1-3597-4d6b-8e68-a8b481eb216b",
+          "name": "Victimization counts and percentages across demographics",
+          "request": {
+            "name": "Victimization counts and percentages across demographics",
+            "description": {},
+            "url": {
+              "path": [
+                "resource",
+                "ms42-n765.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "$limit",
+                  "value": "<integer>",
+                  "description": "Maximum number of records to return (default 1000)."
+                },
+                {
+                  "disabled": false,
+                  "key": "$offset",
+                  "value": "<integer>",
+                  "description": "Pagination offset."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6c8a571b-99df-45d9-af8a-850694c38753",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "resource",
+                    "ms42-n765.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "$limit",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "$offset",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"key_0\": false,\n    \"key_1\": \"string\"\n  },\n  {\n    \"key_0\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "80875392-aac7-49f2-b7ca-56f85fec8784",
+          "name": "Victimization rates by demographic characteristics",
+          "request": {
+            "name": "Victimization rates by demographic characteristics",
+            "description": {},
+            "url": {
+              "path": [
+                "resource",
+                "uy37-xgmh.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "$limit",
+                  "value": "<integer>",
+                  "description": "Maximum number of records to return (default 1000)."
+                },
+                {
+                  "disabled": false,
+                  "key": "$offset",
+                  "value": "<integer>",
+                  "description": "Pagination offset."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a753776d-e76e-4b3c-90bf-11c81efadbf4",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "resource",
+                    "uy37-xgmh.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "$limit",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "$offset",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"key_0\": false,\n    \"key_1\": \"string\"\n  },\n  {\n    \"key_0\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.ojp.gov/bjsdataset/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "0519777a-9544-4f5e-9da2-1df9e5613da8",
+    "name": "BJS NIBRS National Estimates Property Crime Victimization API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Minimal OpenAPI 3.1 description of the Bureau of Justice Statistics' NIBRS National Estimates API. Datasets are served as Socrata-style resources with JSON or CSV representations selected by file extension.",
+      "type": "text/plain"
+    }
+  }
+}

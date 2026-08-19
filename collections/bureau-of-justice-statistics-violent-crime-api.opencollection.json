@@ -1,0 +1,68 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "BJS NIBRS National Estimates Property Crime Violent Crime API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Violent Crime",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Violent crime incidents (counts, percentages, rates)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.ojp.gov/bjsdataset/v1/resource/r32q-bdaw.json",
+            "params": [
+              {
+                "name": "$limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of records to return (default 1000)."
+              },
+              {
+                "name": "$offset",
+                "value": "",
+                "type": "query",
+                "description": "Pagination offset."
+              }
+            ]
+          },
+          "docs": "Violent crime incidents (counts, percentages, rates)"
+        },
+        {
+          "info": {
+            "name": "Violent crime offenses (counts, percentages, rates)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.ojp.gov/bjsdataset/v1/resource/x3sz-eb6y.json",
+            "params": [
+              {
+                "name": "$limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of records to return (default 1000)."
+              },
+              {
+                "name": "$offset",
+                "value": "",
+                "type": "query",
+                "description": "Pagination offset."
+              }
+            ]
+          },
+          "docs": "Violent crime offenses (counts, percentages, rates)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
