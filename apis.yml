@@ -3,6 +3,13 @@ url: https://raw.githubusercontent.com/api-evangelist/bureau-of-justice-statisti
 name: Bureau of Justice Statistics
 tags:
   - Crime
+  - Federal-Government
+  - Justice
+  - Statistics
+  - Victimization
+  - Recidivism
+tags_raw:
+  - Crime
   - Federal Government
   - Justice
   - Statistics
@@ -34,6 +41,10 @@ apis:
 - aid: bureau-of-justice-statistics:ncvs-api
   name: National Crime Victimization Survey (NCVS) API
   tags:
+  - Federal-Government
+  - Victimization
+  - Statistics
+  tags_raw:
   - Federal Government
   - Victimization
   - Statistics
@@ -59,6 +70,10 @@ apis:
 - aid: bureau-of-justice-statistics:bjs-data-analysis-tools
   name: BJS Data Analysis Tools
   tags:
+  - Federal-Government
+  - Statistics
+  - Dashboards
+  tags_raw:
   - Federal Government
   - Statistics
   - Dashboards
