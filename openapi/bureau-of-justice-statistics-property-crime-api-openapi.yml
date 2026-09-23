@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: BJS NIBRS National Estimates Property Crime API
   version: '1.0'
@@ -45,21 +45,14 @@ paths:
                 $ref: '#/components/schemas/RowList'
 components:
   schemas:
-    Row:
-      type: object
-      additionalProperties: true
     RowList:
       type: array
       items:
         $ref: '#/components/schemas/Row'
+    Row:
+      type: object
+      additionalProperties: true
   parameters:
-    LimitParam:
-      name: $limit
-      in: query
-      description: Maximum number of records to return (default 1000).
-      schema:
-        type: integer
-        minimum: 1
     OffsetParam:
       name: $offset
       in: query
@@ -67,3 +60,10 @@ components:
       schema:
         type: integer
         minimum: 0
+    LimitParam:
+      name: $limit
+      in: query
+      description: Maximum number of records to return (default 1000).
+      schema:
+        type: integer
+        minimum: 1
