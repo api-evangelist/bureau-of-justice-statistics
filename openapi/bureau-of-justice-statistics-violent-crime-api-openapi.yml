@@ -45,21 +45,14 @@ paths:
                 $ref: '#/components/schemas/RowList'
 components:
   schemas:
+    Row:
+      type: object
+      additionalProperties: true
     RowList:
       type: array
       items:
         $ref: '#/components/schemas/Row'
-    Row:
-      type: object
-      additionalProperties: true
   parameters:
-    OffsetParam:
-      name: $offset
-      in: query
-      description: Pagination offset.
-      schema:
-        type: integer
-        minimum: 0
     LimitParam:
       name: $limit
       in: query
@@ -67,3 +60,10 @@ components:
       schema:
         type: integer
         minimum: 1
+    OffsetParam:
+      name: $offset
+      in: query
+      description: Pagination offset.
+      schema:
+        type: integer
+        minimum: 0
