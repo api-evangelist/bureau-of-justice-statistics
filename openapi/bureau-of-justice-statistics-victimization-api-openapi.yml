@@ -44,6 +44,14 @@ paths:
               schema:
                 $ref: '#/components/schemas/RowList'
 components:
+  schemas:
+    Row:
+      type: object
+      additionalProperties: true
+    RowList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Row'
   parameters:
     OffsetParam:
       name: $offset
@@ -59,11 +67,3 @@ components:
       schema:
         type: integer
         minimum: 1
-  schemas:
-    RowList:
-      type: array
-      items:
-        $ref: '#/components/schemas/Row'
-    Row:
-      type: object
-      additionalProperties: true
