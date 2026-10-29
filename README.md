@@ -1,4 +1,4 @@
-# Bureau of Justice Statistics (bureau-of-justice-statistics)
+# Bureau of Justice Statistics
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,105 +66,120 @@
 
 The Bureau of Justice Statistics (BJS) publishes information on crime, criminal offenders, victims of crime, and the operation of justice systems.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/bureau-of-justice-statistics/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/bureau-of-justice-statistics/refs/heads/main/apis.yml)
+**Areas:** Crime · Federal Government · Justice · Statistics · Victimization · Recidivism
 
-## Scope
+## Bureau of Justice Statistics on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for Bureau of Justice Statistics is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/bureau-of-justice-statistics/](https://apis.io/providers/bureau-of-justice-statistics/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (5)
 
-- Crime
-- Federal Government
-- Justice
-- Statistics
-- Victimization
-- Recidivism
+- [National Crime Victimization Survey (NCVS) API](https://apis.io/apis/bureau-of-justice-statistics/ncvs-api/) — Provides access to victimization data from the National Crime Victimization Survey (NCVS), covering personal and household victimization data along with…
+- [BJS Data Analysis Tools](https://apis.io/apis/bureau-of-justice-statistics/bjs-data-analysis-tools/) — A suite of interactive web-based data tools providing access to BJS statistical data on crime, corrections, courts, law enforcement, and victimization.…
+- [Bureau of Justice Statistics Property Crime API](https://apis.io/apis/bureau-of-justice-statistics/bureau-of-justice-statistics-property-crime-api/) — The Property Crime API from Bureau of Justice Statistics — 2 operation(s) for property crime.
+- [Bureau of Justice Statistics Victimization API](https://apis.io/apis/bureau-of-justice-statistics/bureau-of-justice-statistics-victimization-api/) — The Victimization API from Bureau of Justice Statistics — 2 operation(s) for victimization.
+- [Bureau of Justice Statistics Violent Crime API](https://apis.io/apis/bureau-of-justice-statistics/bureau-of-justice-statistics-violent-crime-api/) — The Violent Crime API from Bureau of Justice Statistics — 2 operation(s) for violent crime.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2024-11-30
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### NIBRS National Estimates API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-Provides access to national estimates derived from the FBI's National Incident-Based Reporting System (NIBRS). Includes violent and property incidents, offenses, victimization counts, percentages, and rates. No authentication required.
+- [Bureau Of Justice Statistics Agentic Access](https://apis.io/agentic-access/bureau-of-justice-statistics/bureau-of-justice-statistics-agentic-access/)
 
-- **Human URL:** [https://bjs.ojp.gov/national-incident-based-reporting-system-nibrs-national-estimates-api](https://bjs.ojp.gov/national-incident-based-reporting-system-nibrs-national-estimates-api)
-- **Base URL:** `https://api.ojp.gov/bjsdataset/v1/`
+#### Collections (4)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Federal Government
-- Crime
-- Statistics
-- NIBRS
+- [BJS NIBRS National Estimates API](https://apis.io/collections/bureau-of-justice-statistics/open-bureau-of-justice-statistics/)
+- [BJS NIBRS National Estimates Property Crime API](https://apis.io/collections/bureau-of-justice-statistics/open-bureau-of-justice-statistics-property-crime-api/)
+- [BJS NIBRS National Estimates Property Crime Victimization API](https://apis.io/collections/bureau-of-justice-statistics/open-bureau-of-justice-statistics-victimization-api/)
+- [BJS NIBRS National Estimates Property Crime Violent Crime API](https://apis.io/collections/bureau-of-justice-statistics/open-bureau-of-justice-statistics-violent-crime-api/)
 
-#### Properties
+#### Security (1)
 
-- [Documentation](https://bjs.ojp.gov/national-incident-based-reporting-system-nibrs-national-estimates-api)
-- [Data A P I](https://catalog.data.gov/dataset?organization=ojp-gov)
-- [OpenAPI](openapi/bureau-of-justice-statistics-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/bureau-of-justice-statistics.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/bureau-of-justice-statistics.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-### National Crime Victimization Survey (NCVS) API
+- [Bureau Of Justice Statistics Domain Security](https://apis.io/security/bureau-of-justice-statistics/bureau-of-justice-statistics-domain-security/)
 
-Provides access to victimization data from the National Crime Victimization Survey (NCVS), covering personal and household victimization data along with population estimates. No authentication required.
+#### Plans and pricing (1)
 
-- **Human URL:** [https://bjs.ojp.gov/national-crime-victimization-survey-ncvs-api](https://bjs.ojp.gov/national-crime-victimization-survey-ncvs-api)
-- **Base URL:** `https://api.ojp.gov/bjsdataset/v1/`
+Published plans, tiers and prices.
 
-#### Tags
+- [Bureau Of Justice Statistics Plans Pricing](https://apis.io/plans/bureau-of-justice-statistics/bureau-of-justice-statistics-plans-pricing/)
 
-- Federal Government
-- Victimization
-- Statistics
+#### Rate limits (1)
 
-#### Properties
+Published request limits.
 
-- [Documentation](https://bjs.ojp.gov/national-crime-victimization-survey-ncvs-api)
-- [Postman Collection](collections/bureau-of-justice-statistics.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/bureau-of-justice-statistics.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Bureau Of Justice Statistics Rate Limits](https://apis.io/rate-limits/bureau-of-justice-statistics/bureau-of-justice-statistics-rate-limits/)
 
-### BJS Data Analysis Tools
+#### FinOps (1)
 
-A suite of interactive web-based data tools providing access to BJS statistical data on crime, corrections, courts, law enforcement, and victimization. Tools include LEARCAT (law enforcement agency crime data), Recidivism Patterns Explorer, Federal Criminal Case Processing Statistics, and NCVS Dashboard.
+What the API costs to run, by operation.
 
-- **Human URL:** [https://bjs.ojp.gov/data/data-analysis-tools](https://bjs.ojp.gov/data/data-analysis-tools)
+- [Bureau Of Justice Statistics Finops](https://apis.io/finops/bureau-of-justice-statistics/bureau-of-justice-statistics-finops/)
 
-#### Tags
+## Where to find this API
 
-- Federal Government
-- Statistics
-- Dashboards
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-#### Properties
-
-- [Documentation](https://bjs.ojp.gov/data/data-analysis-tools)
-- [Tool](https://learcat.bjs.ojp.gov/)
-- [Tool](https://bjs.ojp.gov/recidivism-patterns-explorer)
-- [Tool](https://fccps.bjs.ojp.gov/)
-- [Tool](https://csat.bjs.ojp.gov/)
-- [Tool](https://bjs.ojp.gov/jeet)
-- [Tool](https://ncvs.bjs.ojp.gov/Home)
-- [Postman Collection](collections/bureau-of-justice-statistics.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/bureau-of-justice-statistics.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/bureau-of-justice-statistics)
 - [Website](https://bjs.ojp.gov/)
-- [Portal](https://bjs.ojp.gov/data)
-- [Privacy Policy](https://bjs.ojp.gov/legal/privacy-policy)
-- [Data  Collections](https://bjs.ojp.gov/data-collections/search)
-- [Data  Portal](https://catalog.data.gov/dataset?organization=ojp-gov)
+- [Blog](https://bjs.ojp.gov/news)
+- [Privacy policy](https://bjs.ojp.gov/legal/privacy-policy)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 20.8** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 53.6 |
+| Contract quality | 38.6 |
+| Contract governance | 0.0 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 21.4 |
+| Access clarity | 7.9 |
+
+**Agent readiness 17.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.9** — Government & Public Sector
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/bureau-of-justice-statistics/](https://apis.io/providers/bureau-of-justice-statistics/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Bureau of Justice Statistics: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/bureau-of-justice-statistics/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
